@@ -1,6 +1,9 @@
 import me.iserbin.template.buildsrc.Libs
 
 buildscript {
+    ext {
+        kotlin_version = '1.4.31'
+    }
     repositories {
         google()
         mavenCentral()
@@ -8,8 +11,10 @@ buildscript {
     }
     dependencies {
         classpath Libs.androidGradlePlugin
-        classpath Libs.Kotlin.gradlePlugin
-        classpath Libs.spotless
+        classpath Libs.Kotlin.kotlinGradlePlugin
+        classpath Libs.spotlessGradlePlugin
+        classpath Libs.Di.hiltGradlePlugin
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 //        classpath Libs.gradleVersionsPlugin // dependencies update - uncomment only for usage
     }
 }
