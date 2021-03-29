@@ -1,2 +1,6 @@
-rootProject.name = "Template"
+rootProject.name = "template"
 include ':app'
+
+rootProject.children.each {
+    it.buildFileName = "${it.name}.gradle"
+}
