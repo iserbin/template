@@ -14,6 +14,8 @@ object Libs {
     const val androidGradlePlugin = "com.android.tools.build:gradle:$androidGradlePluginVersion"
 
     const val junit = "junit:junit:4.13.2"
+    private const val gradle_versions_plugin = "0.36.0"
+    const val gradleVersionsPlugin = "com.github.ben-manes:gradle-versions-plugin:$gradle_versions_plugin"
 
     object Kotlin {
         private const val version = "1.4.31"
