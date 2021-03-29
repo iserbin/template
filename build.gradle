@@ -4,10 +4,12 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        gradlePluginPortal()
     }
     dependencies {
         classpath Libs.androidGradlePlugin
         classpath Libs.Kotlin.gradlePlugin
+//        classpath Libs.gradleVersionsPlugin // dependencies update - uncomment only for usage
     }
 }
 
@@ -16,6 +18,7 @@ allprojects {
         google()
         mavenCentral()
     }
+//    apply plugin: VersionsPlugin // uncomment only for usage
 }
 
 task clean(type: Delete) {
