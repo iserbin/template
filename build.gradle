@@ -8,8 +8,9 @@ buildscript {
     }
     dependencies {
         classpath Libs.androidGradlePlugin
-        classpath Libs.Kotlin.gradlePlugin
-        classpath Libs.spotless
+        classpath Libs.Kotlin.kotlinGradlePlugin
+        classpath Libs.spotlessGradlePlugin
+        classpath Libs.Di.hiltGradlePlugin
 //        classpath Libs.gradleVersionsPlugin // dependencies update - uncomment only for usage
     }
 }

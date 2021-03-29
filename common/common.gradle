@@ -2,23 +2,17 @@ import me.iserbin.template.buildsrc.Libs
 import me.iserbin.template.buildsrc.Versions
 
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
-    id 'kotlin-kapt'
-    id 'dagger.hilt.android.plugin'
 }
-
-apply from: "$project.rootDir/tools/spotless.gradle"
 
 android {
     compileSdkVersion Versions.compileSdk
     defaultConfig {
-        applicationId "me.iserbin.template"
         minSdkVersion Versions.minSdk
         targetSdkVersion Versions.targetSdk
         versionCode Versions.versionApp
         versionName Versions.versionAppName
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -36,16 +30,5 @@ android {
 }
 
 dependencies {
-    implementation project(path: ':common')
-    implementation(Libs.Kotlin.kotlinStdlib)
-    implementation(Libs.AndroidX.core)
-    implementation(Libs.AndroidX.appcompat)
-    implementation(Libs.AndroidX.constraint)
-    implementation(Libs.Ui.material)
-    implementation(Libs.Di.hiltAndroid)
-    kapt(Libs.Di.hiltCompiler)
-
-    testImplementation Libs.junit
-    androidTestImplementation Libs.AndroidX.Test.extJunit
-    androidTestImplementation Libs.AndroidX.Test.espressoCore
+    api(Libs.Debug.timber)
 }
