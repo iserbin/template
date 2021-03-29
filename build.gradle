@@ -9,6 +9,7 @@ buildscript {
     dependencies {
         classpath Libs.androidGradlePlugin
         classpath Libs.Kotlin.gradlePlugin
+        classpath Libs.spotless
 //        classpath Libs.gradleVersionsPlugin // dependencies update - uncomment only for usage
     }
 }
@@ -18,7 +19,8 @@ allprojects {
         google()
         mavenCentral()
     }
-//    apply plugin: VersionsPlugin // uncomment only for usage
+    apply from: rootProject.file('tools/install-git-hooks.gradle')
+//    apply plugin: VersionsPlugin // dependencies update - uncomment only for usage
 }
 
 task clean(type: Delete) {

@@ -1,0 +1,41 @@
+import me.iserbin.template.buildsrc.Versions
+apply plugin: "com.diffplug.spotless"
+
+spotless {
+    // Taken from https://github.com/afollestad/library-template-android/
+    java {
+        target "**/*.java"
+        trimTrailingWhitespace()
+        removeUnusedImports()
+        googleJavaFormat().aosp()
+        indentWithSpaces()
+        endWithNewline()
+        importOrder 'android', 'com', 'junit', 'net', 'org', 'java', 'javax', ''
+    }
+    kotlin {
+        target "**/*.kt"
+        ktlint("${Versions.ktlint}").userData([
+                "indent_size"             : "4",
+                "continuation_indent_size": "4",
+                // `import-ordering` is disable until following issue is resolved
+                // TODO: periodically watch https://github.com/pinterest/ktlint/issues/527
+                "disabled_rules"          : "no-wildcard-imports,import-ordering"
+        ])
+        trimTrailingWhitespace()
+        indentWithSpaces()
+        endWithNewline()
+    }
+    format 'misc', {
+        target '**/*.gradle', '**/*.md', '**/.gitignore'
+        indentWithSpaces()
+        trimTrailingWhitespace()
+        endWithNewline()
+    }
+
+    format 'xml', {
+        target '**/*.xml'
+        indentWithSpaces()
+        trimTrailingWhitespace()
+        endWithNewline()
+    }
+}

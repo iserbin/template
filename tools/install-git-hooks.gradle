@@ -1,0 +1,10 @@
+task installSpotlessPrePushHook(type: Copy) {
+    def gitHooksDirectory = new File("$project.rootDir/.git/hooks/")
+    if (!gitHooksDirectory.exists()) gitHooksDirectory.mkdirs()
+    from new File(rootProject.rootDir, 'tools/spotless-pre-push-hook.sh')
+    into { new File(rootProject.rootDir, '.git/hooks') }
+    rename { String fileName -> 'pre-push' }
+    fileMode 0777
+}
+
+tasks.getByPath(':app:preBuild').dependsOn installSpotlessPrePushHook
