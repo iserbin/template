@@ -1,10 +1,10 @@
 import me.iserbin.template.buildsrc.Libs
 import me.iserbin.template.buildsrc.Versions
-
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
 }
+apply from: "$project.rootDir/tools/spotless.gradle"
 
 android {
     compileSdkVersion Versions.compileSdk

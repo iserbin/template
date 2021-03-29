@@ -12,10 +12,13 @@ object Versions {
 object Libs {
     private const val androidGradlePluginVersion = "4.2.0-beta06"
     const val androidGradlePlugin = "com.android.tools.build:gradle:$androidGradlePluginVersion"
+    private const val spotless_plugin_gradle = "5.9.0"
+    const val spotless = "com.diffplug.spotless:spotless-plugin-gradle:$spotless_plugin_gradle"
 
     const val junit = "junit:junit:4.13.2"
     private const val gradle_versions_plugin = "0.36.0"
-    const val gradleVersionsPlugin = "com.github.ben-manes:gradle-versions-plugin:$gradle_versions_plugin"
+    const val gradleVersionsPlugin =
+        "com.github.ben-manes:gradle-versions-plugin:$gradle_versions_plugin"
 
     object Kotlin {
         private const val version = "1.4.31"
@@ -32,6 +35,7 @@ object Libs {
             const val extJunit = "androidx.test.ext:junit:1.1.2"
             const val espressoCore = "androidx.test.espresso:espresso-core:3.3.0"
         }
+
         const val core = "androidx.core:core:1.3.1"
         const val coreKtx = "androidx.core:core-ktx:1.5.0-beta01"
         const val appcompat = "androidx.appcompat:appcompat:1.2.0"
