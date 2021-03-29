@@ -1,0 +1,44 @@
+import me.iserbin.template.buildsrc.Libs
+import me.iserbin.template.buildsrc.Versions
+
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdkVersion Versions.compileSdk
+    defaultConfig {
+        applicationId "me.iserbin.template"
+        minSdkVersion Versions.minSdk
+        targetSdkVersion Versions.targetSdk
+        versionCode Versions.versionApp
+        versionName Versions.versionAppName
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation(Libs.Kotlin.stdlib)
+    implementation(Libs.AndroidX.core)
+    implementation(Libs.AndroidX.appcompat)
+    implementation(Libs.AndroidX.constraintlayout)
+    implementation(Libs.Ui.material)
+
+    testImplementation Libs.junit
+    androidTestImplementation Libs.AndroidX.Test.extJunit
+    androidTestImplementation Libs.AndroidX.Test.espressoCore
+}
