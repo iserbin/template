@@ -21,6 +21,8 @@ object Versions {
     const val androidxConstraint = "2.0.4"
     const val uiMaterial = "1.3.0"
     const val timber = "4.7.1"
+    const val retrofit = "2.9.0"
+    const val okhttp = "4.9.0"
     const val activity = "1.2.0-rc01"
     const val fragment = "1.3.0-rc01"
     const val navigation = "2.3.4"
@@ -73,6 +75,13 @@ object Libs {
         const val appcompat = "androidx.appcompat:appcompat:${Versions.androidxAppcompat}"
         const val constraint =
             "androidx.constraintlayout:constraintlayout:${Versions.androidxConstraint}"
+    }
+
+    object Network {
+        const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+        const val converterGson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
+        const val okhttpLoggingInterceptor =
+            "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"
     }
 
     object Ui {

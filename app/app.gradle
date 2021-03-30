@@ -11,6 +11,10 @@ plugins {
 
 apply from: "$project.rootDir/tools/spotless.gradle"
 
+def apikeyPropertiesFile = rootProject.file("apikey.properties")
+def apikeyProperties = new Properties()
+apikeyProperties.load(new FileInputStream(apikeyPropertiesFile))
+
 android {
     compileSdkVersion Versions.compileSdk
     defaultConfig {
@@ -20,6 +24,8 @@ android {
         versionCode Versions.versionApp
         versionName Versions.versionAppName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "LAST_FM_API_KEY", apikeyProperties['LAST_FM_API_KEY'])
+        buildConfigField("String", "LAST_FM_SHARED_SECRET", apikeyProperties['LAST_FM_SHARED_SECRET'])
     }
     buildTypes {
         release {

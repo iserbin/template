@@ -1,5 +1,6 @@
 rootProject.name = "template"
 include ':app'
+include ':network'
 include ':ui'
 include ':common'
 rootProject.children.each {
