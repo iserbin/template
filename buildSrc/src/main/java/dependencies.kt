@@ -27,10 +27,13 @@ object Versions {
     const val fragment = "1.3.0-rc01"
     const val navigation = "2.3.4"
     const val annotation = "1.1.0"
+    const val gson = "2.8.6"
+    const val junit = "4.13.2"
 }
 
 object Libs {
-    const val junit = "junit:junit:4.13.2"
+    const val junit = "junit:junit:${Versions.junit}"
+    const val gson = "com.google.code.gson:gson:${Versions.gson}"
     const val androidGradlePlugin = "com.android.tools.build:gradle:${Versions.androidGradlePlugin}"
     const val spotlessGradlePlugin =
         "com.diffplug.spotless:spotless-plugin-gradle:${Versions.spotlessGradlePlugin}"
@@ -80,8 +83,8 @@ object Libs {
     object Network {
         const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
         const val converterGson = "com.squareup.retrofit2:converter-gson:${Versions.retrofit}"
-        const val okhttpLoggingInterceptor =
-            "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"
+        const val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
+        const val okhttpLogging = "com.squareup.okhttp3:logging-interceptor:${Versions.okhttp}"
     }
 
     object Ui {

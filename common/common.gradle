@@ -40,4 +40,10 @@ dependencies {
     api(Libs.AndroidX.fragment)
     api(Libs.AndroidX.constraint)
     api(Libs.AndroidX.annotationLib)
+    api(Libs.AndroidX.annotationLib)
+    api(Libs.gson)
+    api(Libs.Network.retrofit)
+    api(Libs.Network.converterGson)
+    api(Libs.Network.okhttp)
+    api(Libs.Network.okhttpLogging)
 }
