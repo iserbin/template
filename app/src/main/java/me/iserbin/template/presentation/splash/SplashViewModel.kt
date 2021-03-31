@@ -17,10 +17,8 @@ class SplashViewModel @Inject constructor(
 ) : ViewModel() {
 
     init {
-        Timber.d("-> ")
         viewModelScope.launch {
             delay(2000)
-            Timber.d("-> after delay")
             navigationDispatcher.emit {
                 it.navigate(SplashFragmentDirections.actionSplashFragmentToLoginFragment())
             }
