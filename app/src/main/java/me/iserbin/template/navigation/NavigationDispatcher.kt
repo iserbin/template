@@ -1,4 +1,4 @@
-package me.iserbin.common.navigation
+package me.iserbin.template.navigation
 
 import dagger.hilt.android.scopes.ActivityRetainedScoped
 import kotlinx.coroutines.flow.MutableSharedFlow

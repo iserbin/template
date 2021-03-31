@@ -38,7 +38,7 @@ dependencies {
     implementation project(path: ':common')
     implementation(Libs.Di.hiltAndroid)
     kapt(Libs.Di.hiltCompiler)
-    testImplementation Libs.junit
-    androidTestImplementation Libs.AndroidX.Test.extJunit
-    androidTestImplementation Libs.AndroidX.Test.espressoCore
+    testImplementation (Libs.junit)
+    androidTestImplementation (Libs.AndroidX.Test.extJunit)
+    androidTestImplementation (Libs.AndroidX.Test.espressoCore)
 }

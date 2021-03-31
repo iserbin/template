@@ -8,7 +8,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.InternalCoroutinesApi
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
-import me.iserbin.common.navigation.NavigationDispatcher
+import me.iserbin.template.navigation.NavigationDispatcher
 import me.iserbin.template.R
 import javax.inject.Inject
 

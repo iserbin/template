@@ -6,7 +6,7 @@ import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import me.iserbin.common.navigation.NavigationDispatcher
+import me.iserbin.template.navigation.NavigationDispatcher
 import timber.log.Timber
 import javax.inject.Inject
 
