@@ -1,7 +1,7 @@
 package me.iserbin.template.interactors.debug
 
-import me.iserbin.common.logging.FirebaseCrashlyticsTimberTree
-import me.iserbin.common.logging.NumberedTimberTree
+import me.iserbin.common.debug.logging.FirebaseCrashlyticsTimberTree
+import me.iserbin.common.debug.logging.NumberedTimberTree
 import timber.log.Timber
 import javax.inject.Inject
 

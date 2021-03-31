@@ -6,6 +6,8 @@ plugins {
     id 'kotlin-android'
 }
 
+apply from: "$project.rootDir/tools/spotless.gradle"
+
 android {
     compileSdkVersion Versions.compileSdk
     defaultConfig {
@@ -31,4 +33,11 @@ android {
 
 dependencies {
     api(Libs.Debug.timber)
+    api(Libs.Kotlin.kotlinStdlib)
+    api(Libs.Kotlin.coroutines)
+    api(Libs.AndroidX.core)
+    api(Libs.AndroidX.activity)
+    api(Libs.AndroidX.fragment)
+    api(Libs.AndroidX.constraint)
+    api(Libs.AndroidX.annotationLib)
 }

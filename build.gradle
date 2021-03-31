@@ -11,6 +11,8 @@ buildscript {
         classpath Libs.Kotlin.kotlinGradlePlugin
         classpath Libs.spotlessGradlePlugin
         classpath Libs.Di.hiltGradlePlugin
+        classpath Libs.AndroidX.navigationSafeArgs
+        //classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
 //        classpath Libs.gradleVersionsPlugin // dependencies update - uncomment only for usage
     }
 }

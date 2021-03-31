@@ -11,6 +11,7 @@ object Versions {
     const val spotlessGradlePlugin = "5.9.0"
     const val gradleVersionsPlugin = "0.36.0"
     const val kotlin = "1.4.31"
+    const val coroutines = "1.4.3"
     const val hilt = "2.33-beta"
     const val test = "1.2.0"
     const val testExtJunit = "1.1.2"
@@ -20,6 +21,10 @@ object Versions {
     const val androidxConstraint = "2.0.4"
     const val uiMaterial = "1.3.0"
     const val timber = "4.7.1"
+    const val activity = "1.2.0-rc01"
+    const val fragment = "1.3.0-rc01"
+    const val navigation = "2.3.4"
+    const val annotation = "1.1.0"
 }
 
 object Libs {
@@ -32,6 +37,8 @@ object Libs {
 
     object Kotlin {
         const val kotlinStdlib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlin}"
+        const val coroutines =
+            "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
         const val kotlinGradlePlugin =
             "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
     }
@@ -53,6 +60,16 @@ object Libs {
         }
 
         const val core = "androidx.core:core:${Versions.androidxCore}"
+        const val annotationLib = "androidx.annotation:annotation:${Versions.annotation}"
+        const val activity = "androidx.activity:activity-ktx:${Versions.activity}"
+        const val fragment = "androidx.fragment:fragment-ktx:${Versions.fragment}"
+        const val navigationRuntime =
+            "androidx.navigation:navigation-runtime:${Versions.navigation}"
+        const val navigationUi = "androidx.navigation:navigation-ui-ktx:${Versions.navigation}"
+        const val navigationSafeArgs =
+            "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigation}"
+        const val navigationFragment =
+            "androidx.navigation:navigation-fragment-ktx:${Versions.navigation}"
         const val appcompat = "androidx.appcompat:appcompat:${Versions.androidxAppcompat}"
         const val constraint =
             "androidx.constraintlayout:constraintlayout:${Versions.androidxConstraint}"
