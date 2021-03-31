@@ -12,4 +12,3 @@ class Date {
     @Expose
     var text: String? = null
 }
-

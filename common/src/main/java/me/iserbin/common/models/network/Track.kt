@@ -65,7 +65,7 @@ class Track {
         return artist!!.text + " - " + name
     }
 
-    //this is necessary as API returns different types
+    // this is necessary as API returns different types
     class TrackDataStateDeserializer : JsonDeserializer<Track?> {
         @Throws(JsonParseException::class)
         override fun deserialize(

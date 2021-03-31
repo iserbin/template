@@ -19,7 +19,7 @@ class Album : Favoritable {
     @Expose
     override var name: String? = null
 
-    //this is neccecary as artist returns both string and artist object
+    // this is neccecary as artist returns both string and artist object
     @SerializedName("artist")
     @Expose
     var artist: Any? = null
@@ -48,7 +48,7 @@ class Album : Favoritable {
     @Expose
     var listeners: String? = null
 
-    //TODO: possible problem, as one API call for specific album returns a String playcount, the artists top album call returns a String
+    // TODO: possible problem, as one API call for specific album returns a String playcount, the artists top album call returns a String
     @SerializedName("playcount")
     @Expose
     var playcount: Any? = null
@@ -65,7 +65,7 @@ class Album : Favoritable {
     @Expose
     var wiki: Wiki? = null
 
-    //this is necessary as API returns different types
+    // this is necessary as API returns different types
     class DataStateDeserializer : JsonDeserializer<Album?> {
         @Throws(JsonParseException::class)
         override fun deserialize(
