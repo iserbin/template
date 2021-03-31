@@ -2,11 +2,10 @@ import me.iserbin.template.buildsrc.Libs
 import me.iserbin.template.buildsrc.Versions
 
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
-    id 'androidx.navigation.safeargs.kotlin'
 }
 
 apply from: "$project.rootDir/tools/spotless.gradle"
@@ -14,7 +13,6 @@ apply from: "$project.rootDir/tools/spotless.gradle"
 android {
     compileSdkVersion Versions.compileSdk
     defaultConfig {
-        applicationId "me.iserbin.template"
         minSdkVersion Versions.minSdk
         targetSdkVersion Versions.targetSdk
         versionCode Versions.versionApp
@@ -34,19 +32,10 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures {
-        viewBinding true
-    }
 }
 
 dependencies {
     implementation project(path: ':common')
-    implementation project(path: ':ui')
-    implementation(Libs.AndroidX.appcompat)
-    implementation(Libs.AndroidX.navigationRuntime)
-    implementation(Libs.AndroidX.navigationUi)
-    implementation(Libs.AndroidX.navigationFragment)
-    implementation(Libs.Ui.material)
     implementation(Libs.Di.hiltAndroid)
     kapt(Libs.Di.hiltCompiler)
     testImplementation Libs.junit

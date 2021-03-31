@@ -1,4 +1,4 @@
-package me.iserbin.common
+package me.iserbin.ui
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package me.iserbin.common.logging
+package me.iserbin.common.debug.logging
 
 import android.util.Log
 import timber.log.Timber
